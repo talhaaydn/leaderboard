@@ -178,8 +178,8 @@ Oyuncunun veritabanında kayıtlı olup olmadığı kontrol edilir. Eğer verita
 
 ```
 {
-    message: "Player doesn't find.",
-    success: false
+    "message": "Player doesn't find.",
+    "success": false
 }
 ```
 
@@ -191,7 +191,7 @@ Bu işlemler başarılı bir şekilde tamamlanırsa aşağıdaki gibi bir yanıt
 
 ```
 {
-    message: "Player doesn't find.",
-    success: false
+    "message": "Score successfully added to player.",
+    "success": true
 }
 ```
