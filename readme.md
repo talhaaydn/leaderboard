@@ -2,16 +2,6 @@
 
 10.000.000 oyuncusu olan bir oyuna haftalık leaderboard özelliği eklenecek. Oyuncuların hafta başlangıcından itibaren kazandıkları paraya (oyun içi) göre sıralama yapılacak. Hafta tamamlandığında ilk 100 oyuncu yine oyun içi parayla ödüllendirilecek. Liste sıfırlanarak sistem yeniden başlayacak.
 
-## Gereksinimler
-
--   Bir oyuncunun parasının online olduğu süreçte saniyede bir kere güncelleneceği göz önünde bulundurulmalı.
--   Sistemin zaman içerisinde scale edilebilir bir mimariye sahip olması gerekiyor.
--   Leaderboard ekranı için ilk 100 oyuncuyu, mevcut oyuncuyu, mevcut oyuncunun 3 önündeki ve 2 arkasındaki oyuncuyu dönecek tek bir method olmalı.
--   Oyuncuların userId, score değerlerinin yan ısıra userName, age değerleri ve Leaderboardda gösterilen oyuncuların son 1 gün içerisindeki sıralama yükselme, düşme durumları da (+3, -122 vb.) sorgu sonuçlarında dönmeli.
--   Bütün oyuncuların o hafta içerisinde kazandıkları paranın %2’si ödül havuzunda toplanmalı.
--   Hafta bitiminde ödül havuzundaki paranın %20’si 1. Oyuncuya, %15’i 2. Oyuncuya, %10’u üçüncü oyuncuya, geri kalan miktar ise oyuncuların sıralamalarına oranlı bir şekilde ilk 100’deki diğer oyunculara ödül olarak verilmeli.
--   Cache’leme yapılabilir ama gerçek zamanlı veya gerçek zamanlıya en yakın çözüm tercih sebebi olacak.
-
 ## Problemi Nasıl Çözdüm?
 
 Bu tür projelerde okuma-yazma hızları yüksek olması gerekiyor. Bu sebeple noSQL bir veritabanı olan MongoDB ile birlikte Redis ile cache'leme yapmaya karar verdim.
